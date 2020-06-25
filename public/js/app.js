@@ -28,8 +28,20 @@ weatherForm.addEventListener("submit", (e) => {
           messageTwo.textContent = "";
         } else {
           //   console.log(data.location, "has", data.temperature, "deg C");
+          console.log(data);
           messageOne.textContent = data.location;
-          messageTwo.textContent = data.temperature + " deg C";
+          //   messageTwo.textContent =
+          //     "The weather is " +
+          //     data.description +
+          //     " & Temperature is " +
+          //     data.temperature +
+          //     "&#8451;";
+          messageTwo.innerHTML =
+            "The weather is '" +
+            data.description +
+            "' & temperature is " +
+            data.temperature +
+            " &#8451";
         }
       });
     });

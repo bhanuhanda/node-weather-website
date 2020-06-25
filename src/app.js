@@ -20,19 +20,19 @@ hbs.registerPartials(partialsPath);
 // Setting up routes for dynamic views
 app.get("", (req, res) => {
   res.render("index", {
-    name: "Bhanu",
+    name: "Bhanu Handa",
     pageDesc: "Weather Page",
   });
 });
 app.get("/about", (req, res) => {
   res.render("about", {
-    name: "Bhanu",
+    name: "Bhanu Handa",
     pageDesc: "About Page",
   });
 });
 app.get("/profile", (req, res) => {
   res.render("profile", {
-    name: "Bhanu",
+    name: "Bhanu Handa",
     pageDesc: "Profile Page",
   });
 });
@@ -74,7 +74,7 @@ app.get("/weather", (req, res) => {
         error: err,
       });
     }
-    forecast(latitude, longitude, (err, forecastData) => {
+    forecast(latitude, longitude, (err, { desc, temp }) => {
       if (err) {
         return res.send({
           error: err,
@@ -82,7 +82,8 @@ app.get("/weather", (req, res) => {
       }
       res.send({
         location: location,
-        temperature: forecastData,
+        description: desc,
+        temperature: temp,
       });
     });
   });
@@ -104,8 +105,8 @@ app.get("/about/*", (req, res) => {
 });
 app.get("*", (req, res) => {
   res.render("404", {
-    errorMsg: "Page Not Found",
-    name: "Bhanu",
+    errorMsg: "Page Not Found, Please try a valid Url.",
+    name: "Bhanu Handa",
     pageDesc: "404",
   });
 });

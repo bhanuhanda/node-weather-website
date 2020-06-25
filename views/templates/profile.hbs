@@ -9,12 +9,27 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
+<body class="profileBody">
     <div class="main-content">
         {{>header}}
-        Welcome to my profile
+        {{!-- <img class="profilePotrait" src="/imgs/profile.svg" alt="image"> --}}
+        <p style="color:#333;width:300px">
+            Hi, I am a Software Developer from India.
+            <br>
+            I love to design and code.
+            <br><br>
+        </p>
+        <hr style="width: 314px; float:left;">
+        <p style="color:#333;width:300px">
+            <br><br>
+            Check out my other projects at <a href="https://github.com/bhanuhanda"
+                target="_blank">https://github.com/bhanuhanda</a>
+            <br>
+            <br>
+            Connect with me at <span style="color:brown">bhanuhanda98@gmail.com</span>
+        </p>
     </div>
-    {{>footer}}
+    <div class="aboutFooter">{{>footer}}</div>
 </body>
 
 </html>

@@ -9,12 +9,32 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
+<body class="aboutBody">
     <div class="main-content">
         {{>header}}
-        <img class="potrait" src="./imgs/me.jpg" alt="image">
+        <p style="color:#333;width:300px;">
+            This is a toy project while learning NodeJs, that fetches the weather of the location entered by user.
+            <br><br>
+            It is created using <span style="color: brown;">Node</span> and
+            <span style="color: brown;">Express.</span>
+            It uses <span style="color: brown;">Handlebars</span> to
+            display the dynamic pages.
+            <br><br>
+            The Weather search functionality uses the <span style="color: brown;">Mapbox Api</span> to fetch the Geo
+            co-ordinates against the location
+            entered
+            by the user and then uses the <span style="color: brown;">Open Weather Map Api</span> for fetching the
+            current
+            realtime weather forecast information of
+            that specific location.
+            <br><br>
+            The version control is managed using <span style="color: brown;">Git</span> and the project is deployed on
+            <span style="color: brown;">Heroku.</span>
+            <br><br>
+            Hope it was worth checking !
+        </p>
     </div>
-    {{>footer}}
+    <div class="aboutFooter">{{>footer}}</div>
 </body>
 
 </html>

@@ -4,21 +4,69 @@ body {
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
+    background: #ddd;
 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+}
+
+.indexBody {
+    background-image: url("/imgs/weatherBg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.aboutBody {
+    background-image: url("/imgs/aboutBg.svg");
+    background-size: 50vw;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.pageNotFoundBody {
+    background-image: url("/imgs/404.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profileBody {
+    background-image: url("/imgs/profile.svg");
+    background-size: 50vw;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: 76%;
 }
 
 .main-content {
     flex-grow: 1;
 }
 
-footer {
-    color: #888;
+form {
+    margin-bottom: 16px;
+}
+
+.main-content p {
+    color: #fff;
+    margin: 8px;
+}
+
+.aboutFooter {
+    color: #333;
+    border-top: 2px solid #333;
+    margin-top: 16px;
+    padding: 16px 0;
+    text-align: center;
+}
+
+.indexFooter {
+    color: #eee !important;
     border-top: 2px solid #eee;
     margin-top: 16px;
     padding: 16px 0;
+    text-align: center;
 }
 
 header {
@@ -31,24 +79,54 @@ h2 {
     margin-bottom: 16px;
 }
 
+header .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+
 header a {
     color: #888;
-    margin-right: 16px;
+    margin: 0 12px;
     text-decoration: none;
+    width: 62px;
+    padding: 4px;
+    border-bottom: 1.2px solid #888;
+}
+
+header a:hover {
+    color: #333;
+    border-bottom: 1.2px solid #333;
+    transition: 0.2s all ease-in;
 }
 
 .potrait {
     width: 250px;
 }
 
+.profilePotrait {
+    width: 500px;
+}
+
 input {
+    width: 200px;
     border: 1px solid #ccc;
     padding: 8px;
     border-radius: 5px;
+    font-size: 15px;
+
+}
+
+input::placeholder {
+    color: #333;
+    font-size: 15px;
 }
 
 input:hover {
     border: 1.5px solid #333;
+    width: 199px;
     transition: 0.2s all ease-in;
 }
 

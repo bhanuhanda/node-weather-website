@@ -14,9 +14,12 @@ const forecast = (lat, lon, callback) => {
     } else if (body.cod !== 200) {
       callback("unable to find location", undefined);
     } else {
-      callback(undefined, body.main.temp);
+      callback(undefined, {
+        desc: body.weather[0].description,
+        temp: body.main.temp,
+      });
       //   const data = res.body;
-      //   console.log("The temperature is " + data.main.temp + "K");
+      //   console.log(body.weather[0].description);
     }
   });
 };

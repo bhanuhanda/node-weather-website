@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
+<body class="pageNotFoundBody">
     <div class="main-content">
         {{>header}}
-        <p>{{errorMsg}}</p>
+        <h3 style="color: #555;">{{errorMsg}}</h3>
     </div>
-    {{>footer}}
+    <div class="aboutFooter">{{>footer}}</div>
 </body>
 
 </html>
