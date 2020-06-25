@@ -1,4 +1,4 @@
-console.log("Js file loaded !!");
+// console.log("Js file loaded !!");
 
 // fetch("http://puzzle.mead.io/puzzle").then((res) => {
 //   res.json().then((data) => {
@@ -18,6 +18,7 @@ weatherForm.addEventListener("submit", (e) => {
   //   console.log(location);
   if (location !== "") {
     messageOne.textContent = "Loading..";
+    messageTwo.textContent = "";
 
     fetch("/weather?address=" + location).then((res) => {
       res.json().then((data) => {
